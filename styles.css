@@ -1,0 +1,210 @@
+:root {
+  --cardinal: #a50000;
+  --cardinal-dark: #790000;
+  --gold: #ffcc00;
+  --ink: #17120f;
+}
+
+* { box-sizing: border-box; }
+
+html, body { margin: 0; min-height: 100%; }
+
+body {
+  color: var(--ink);
+  background: #efefef;
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+.hero {
+  position: relative;
+  height: 620px;
+  background: url("https://today.usc.edu/wp-content/uploads/2025/03/Bovard-auditorium-2018-web-2-1920x1080.jpg") center 48% / cover no-repeat;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, .38);
+}
+
+.hero-wordmark {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: flex;
+  align-items: center;
+  transform: translate(-50%, -52%);
+  color: #fff;
+  white-space: nowrap;
+}
+
+.hero-usc,
+.hero-trojans {
+  line-height: 1;
+  text-shadow: 0 2px 9px rgba(0,0,0,.5);
+}
+
+.hero-trojans { margin-left: .3em; color: #e9474e; }
+
+.hero-wordmark img {
+  width: 96px;
+  max-height: 96px;
+  margin-left: .65rem;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 7px rgba(0,0,0,.35));
+}
+
+.info-section { position: relative; background: #fff; }
+
+.tabs-wrap {
+  position: relative;
+  z-index: 5;
+  height: 0;
+  width: 100%;
+  max-width: 1320px;
+  margin: 0 auto;
+}
+
+.usc-tabs {
+  background: var(--cardinal);
+}
+
+.tabs-wrap > .row { position: absolute; top: 38px; right: 0; left: 0; }
+
+.usc-tab {
+  min-height: 58px;
+  padding: .75rem 1rem;
+  border: 0;
+  border-right: 1px solid rgba(255,255,255,.18);
+  background: var(--cardinal);
+  color: #fff;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.12rem;
+  transition: background .18s ease, color .18s ease;
+}
+
+.usc-tab:last-child { border-right: 0; }
+.usc-tab:hover { background: var(--cardinal-dark); }
+.usc-tab { cursor: default; text-align: center; }
+.usc-tab.active { background: var(--gold); color: #211900; }
+
+.panels, .usc-panel { min-height: 650px; }
+
+.usc-panel { padding: 112px 0 54px; background: #fff; }
+.usc-panel.active { animation: fadeIn .28s ease; }
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.panel-container { max-width: 1320px; }
+.panel-copy h1 { margin: 0; color: var(--cardinal); font-weight: 400; line-height: 1; }
+.gold-rule { width: 100%; max-width: 400px; height: 4px; margin: 1rem 0 1.4rem; background: var(--gold); }
+.panel-copy p { max-width: 520px; margin-bottom: .85rem; font-size: 1rem; line-height: 1.58; }
+
+.image-placeholder {
+  background: #eef0f2;
+  color: #969da4;
+  border: 1px solid #e0e3e6;
+  font-size: 6rem;
+}
+
+.sc-logo {
+  width: 220px;
+  max-width: 100%;
+  max-height: 330px;
+  object-fit: contain;
+}
+
+.logo-image-placeholder {
+  width: 220px;
+  max-width: 100%;
+  height: 280px;
+  margin: 0 auto;
+}
+
+.panel-photo {
+  display: block;
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+.about-photo { object-position: center; }
+
+.featured-program img {
+  display: block;
+  width: 100%;
+  height: 275px;
+  object-fit: cover;
+}
+
+.featured-program h1 { margin: 1rem 0 .35rem; color: var(--cardinal); font-size: 2rem; font-weight: 400; }
+.featured-program p { margin: 0; font-size: .9rem; line-height: 1.5; }
+
+.program-picker {
+  display: grid;
+  grid-template-columns: 34px 1fr 34px;
+  align-items: center;
+  gap: .75rem;
+}
+
+.program-list-window { height: 336px; overflow: hidden; }
+.program-list { transition: transform .45s ease; }
+
+.program-choice {
+  display: block;
+  width: 100%;
+  height: 84px;
+  padding: .65rem 1rem;
+  border: 0;
+  border-bottom: 1px solid #ded8d1;
+  background: #fff;
+  color: #17120f;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1rem;
+  line-height: 1.2;
+  text-align: left;
+}
+
+.program-choice:hover { background: #f6f1e9; }
+.program-choice.active { color: var(--cardinal); font-weight: 700; }
+
+.program-arrow {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 72px;
+  border: 0;
+  background: transparent;
+  color: #111;
+  font-size: 1.45rem;
+}
+
+.program-arrow:hover, .program-arrow:focus-visible { color: var(--cardinal); }
+
+.aid-copy { text-align: left; }
+.aid-photo { height: 300px; }
+
+.admissions {
+  position: relative;
+  min-height: 800px;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  background: url("https://www.usc.edu/wp-content/uploads/2023/01/Students__GR33903-768x432.jpg") center / cover no-repeat;
+}
+
+.admissions-overlay { position: absolute; inset: 0; background: rgba(0,0,0,.52); }
+.admissions-inner { position: relative; z-index: 1; max-width: 1320px; padding-top: 4rem; padding-bottom: 4rem; }
+.admissions h2 { margin: 0 0 4rem; font-weight: 400; text-align: center; }
+.deadline-row { text-align: center; }
+.deadline { position: relative; padding: 1rem 2rem; }
+.deadline + .deadline::before { content: ""; position: absolute; top: 10%; bottom: 10%; left: 0; width: 1px; background: rgba(255,255,255,.58); }
+.deadline h3 { margin: 0; font-weight: 400; line-height: 1.12; }
+.deadline p { margin: 2rem 0 0; color: #ff5a66; font-size: 4.5rem; line-height: 1; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+}
