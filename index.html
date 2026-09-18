@@ -12,12 +12,26 @@
 
 <body>
   <main>
-    <section class="hero" aria-label="USC campus">
+    <section class="hero d-flex align-items-center " aria-label="USC campus">
       <div class="hero-overlay"></div>
-      <div class="hero-wordmark" aria-label="USC Trojans">
-        <span class="hero-usc display-1">USC</span>
-        <span class="hero-trojans display-1">TROJANS</span>
-        <img class="img-fluid d-none d-sm-block" src="trojan.png" alt="USC Trojan helmet">
+
+      <div class="container position-relative ">
+        <div class="row align-items-center">
+
+          <div class="col-md-7 text-center text-md-start text-white">
+            <div>
+              <span class="hero-usc display-1">USC</span>
+              <span class="hero-trojans display-1">TROJANS</span>
+            </div>
+
+            <p class="fs-1 mb-0">Known for dramatic arts and music</p>
+          </div>
+
+          <div class="col-md-5 text-center text-md-end">
+            <img class="trojan img-fluid d-none d-md-inline-block" src="trojan.png" alt="USC Trojan helmet">
+          </div>
+
+        </div>
       </div>
     </section>
 
@@ -28,8 +42,8 @@
             <div class="col-12 col-md-8">
               <div class="row g-0 mb-5 usc-tabs" aria-label="USC information sections">
                 <button type="button"
-                  class="usc-tab active col-6 col-md-3 d-flex align-items-center justify-content-center"
-                  data-panel="about-panel">About</button>
+                  class="usc-tab active col-6 col-md-3 d-flex align-items-center justify-content-center "
+                  data-panel="about-panel ">About</button>
                 <button type="button" class="usc-tab col-6 col-md-3 d-flex align-items-center justify-content-center"
                   data-panel="programs-panel">Programs</button>
                 <button type="button" class="usc-tab col-6 col-md-3 d-flex align-items-center justify-content-center"
@@ -68,8 +82,83 @@
 
 
           <article class="usc-panel" id="programs-panel" data-panel="programs-panel" hidden>
-            <div class="container panel-container program-panel-container" aria-label="Blank panel"></div>
-            <img src="usc.logo].png">
+            <div class="container panel-container program-panel-container">
+              <div class="row p-5 align-items-center g-4">
+
+                <!-- USC logo -->
+                <div class="col-lg-3 text-center">
+                  <img class="sc-logo img-fluid" src="usc.logo].png" alt="USC interlocking SC logo">
+                </div>
+
+                <!-- Bootstrap carousel: program cards -->
+                <div class="col-lg-3">
+                  <div id="programCarousel" class="carousel slide">
+
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <div class="program-feature-card">
+                          <img src="arts.png" class="program-image" alt="USC School of Cinematic Arts logo">
+                          <h2>Title of program</h2>
+                          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        </div>
+                      </div>
+                      <div class="carousel-item">
+                        <div class="program-feature-card">
+                          <img src="vertibi.png" class="program-image" alt="USC Viterbi School of Engineering logo">
+                          <h2>USC Viterbi School of Engineering</h2>
+                          <p>Explore engineering, computer science, innovation, and real-world problem solving.</p>
+                        </div>
+                      </div>
+
+                      <div class="carousel-item">
+                        <div class="program-feature-card">
+                          <img src="cinema.png" class="program-image" alt="USC Marshall School of Business logo">
+                          <h2>USC Marshall School of Business</h2>
+                          <p>Build leadership, business, and entrepreneurship skills in the heart of Los Angeles.</p>
+                        </div>
+                      </div>
+
+                      <!-- Add more .carousel-item slides here later -->
+                    </div>
+
+                    <button class="carousel-control-prev" type="button" data-bs-target="#programCarousel"
+                      data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon"></span>
+                    </button>
+
+                    <button class="carousel-control-next" type="button" data-bs-target="#programCarousel"
+                      data-bs-slide="next">
+                      <span class="carousel-control-next-icon"></span>
+                    </button>
+
+                  </div>
+                </div>
+
+                <!-- Empty vertical automatic carousel area for later -->
+                <div class="col-lg-6">
+                  <div id="verticalProgramCarousel" class="carousel slide vertical-program-carousel"
+                    data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <!-- Leave empty for now -->
+                        <div class="vertical-carousel-placeholder"></div>
+                      </div>
+                    </div>
+
+                    <button class="carousel-control-prev" type="button" data-bs-target="#verticalProgramCarousel"
+                      data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon"></span>
+                    </button>
+
+                    <button class="carousel-control-next" type="button" data-bs-target="#verticalProgramCarousel"
+                      data-bs-slide="next">
+                      <span class="carousel-control-next-icon"></span>
+                    </button>
+                  </div>
+                </div>
+
+              </div>
+            </div>
           </article>
 
 
