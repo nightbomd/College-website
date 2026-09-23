@@ -361,3 +361,7 @@ body {
   color: var(--cardinal-dark);
   font-weight: 800;
 }
+.chart {
+  max-width: 100%;
+  height: auto;
+}
