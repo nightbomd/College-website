@@ -18,16 +18,18 @@
       <div class="container position-relative ">
         <div class="row align-items-center">
 
-          <div class="col-md-7 text-center text-md-start text-white">
+          <div class="col-md-7 text-center text-md-start text-white translate-element fade-element">
             <div>
               <span class="hero-usc display-1">USC</span>
               <span class="hero-trojans display-1">TROJANS</span>
             </div>
 
             <p class="fs-1 mb-0">Known for dramatic arts and music</p>
+            <a href="https://usc.edu/" target="blank"><button
+                class=" btn btn-outline-light fs-3 w-100 fade-element">Learn More</button></a>
           </div>
 
-          <div class="col-md-5 text-center text-md-end">
+          <div class="col-md-5 text-center text-md-end fade-element">
             <img class="trojan img-fluid d-none d-md-inline-block" src="trojan.png" alt="USC Trojan helmet">
           </div>
 
@@ -35,15 +37,15 @@
       </div>
     </section>
 
-    <section class="info-section p-5" aria-label="Explore USC">
-      <div class="container-fluid p-5">
+    <section class="info-section p-2 p-md-5 fade-element" aria-label="Explore USC">
+      <div class="container-fluid p-0 p-md-5">
         <div class="tabs-wrap">
           <div class="row g-0 justify-content-end">
             <div class="col-12 col-md-8">
               <div class="row g-0 mb-5 usc-tabs" aria-label="USC information sections">
                 <button type="button"
                   class="usc-tab active col-6 col-md-3 d-flex align-items-center justify-content-center "
-                  data-panel="about-panel ">About</button>
+                  data-panel="about-panel">About</button>
                 <button type="button" class="usc-tab col-6 col-md-3 d-flex align-items-center justify-content-center"
                   data-panel="programs-panel">Programs</button>
                 <button type="button" class="usc-tab col-6 col-md-3 d-flex align-items-center justify-content-center"
@@ -60,100 +62,116 @@
         <div class="panels" id="about" data-panel="about-panel">
           <article class="usc-panel active" id="about-panel">
             <div class="container panel-container">
-              <div class="row p-5 align-items-center g-4 g-lg-5">
+              <div class="row p-3 p-md-5 align-items-center g-4 g-lg-5">
                 <div class="col-lg-3 text-center">
-                  <img class="sc-logo img-fluid"
+                  <img class="sc-logo panel-image img-fluid"
                     src="https://mievenfall.github.io/static/media/usc-logo.4671a29459287181b710.png"
                     alt="USC interlocking SC logo">
                 </div>
-                <div class="col-lg-5 panel-copy text-center text-lg-start">
-                  <h1 class="display-2">Lorem Ipsum</h1>
+                <div class="col-lg-6 panel-copy text-center text-lg-start">
+                  <h1 class="display-2">Overview</h1>
                   <div class="gold-rule"></div>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua.</p>
-                  <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                    consequat.</p>
+                  <p>The University of Southern California (USC) is a private research university located in Los
+                    Angeles, California. Its motto is "The Truth Shall Make You Free." and promotes Diversity.</p>
+                  <p>Usc is known for its strong emphasis on the arts and cinematic studies, as well as its diverse
+                    student body and commitment to social justice.</p>
                 </div>
-                <div class="col-lg-4">
-                  <img src="about.img.png" class="panel-photo img-fluid" alt="USC campus">
+                <div class="col-lg-3">
+                  <img src="about.img.png" class="panel-photo panel-image img-fluid" alt="USC campus">
                 </div>
               </div>
+            </div>
           </article>
 
 
           <article class="usc-panel" id="programs-panel" data-panel="programs-panel" hidden>
             <div class="container panel-container program-panel-container">
-              <div class="row p-5 align-items-center g-4">
+              <div class="row p-3 p-md-5 align-items-center g-4 g-lg-5">
 
                 <!-- USC logo -->
                 <div class="col-lg-3 text-center">
-                  <img class="sc-logo img-fluid" src="usc.logo].png" alt="USC interlocking SC logo">
+                  <img class="sc-logo panel-image img-fluid" src="usc.logo].png" alt="USC interlocking SC logo">
                 </div>
 
                 <!-- Bootstrap carousel: program cards -->
-                <div class="col-lg-3">
-                  <div id="programCarousel" class="carousel slide">
+                <div class="col-lg-9">
+                  <div id="programCarousel" class="carousel slide px-5">
 
                     <div class="carousel-inner">
+
                       <div class="carousel-item active">
-                        <div class="program-feature-card">
-                          <img src="arts.png" class="program-image" alt="USC School of Cinematic Arts logo">
-                          <h2>Title of program</h2>
-                          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        <div class="program-feature-card row g-4 align-items-start">
+                          <div class="col-md-5">
+                            <img src="arts.png" class="program-image img-fluid" alt="USC School of Cinematic Arts logo">
+                          </div>
+
+                          <div class="col-md-7 panel-copy text-center text-md-start">
+                            <h2 class="display-2">USC School of Cinematic Arts</h2>
+                            <div class="gold-rule"></div>
+
+                            <p>USC's School of Cinematic Arts allows students to study areas such as <span
+                                class="text-red">film production, animation, screenwriting, interactive media, and game
+                                design.</span></p>
+
+                            <p>Located in Los Angeles, students are surrounded by one of the world's largest <span
+                                class="text-red">film and entertainment industries.</span></p>
+
+                            <p>Students can gain hands-on experience creating films, games, animations, and other media
+                              while working with students from different cinematic disciplines.</p>
+                          </div>
                         </div>
                       </div>
+
+
                       <div class="carousel-item">
-                        <div class="program-feature-card">
-                          <img src="vertibi.png" class="program-image" alt="USC Viterbi School of Engineering logo">
-                          <h2>USC Viterbi School of Engineering</h2>
-                          <p>Explore engineering, computer science, innovation, and real-world problem solving.</p>
+                        <div class="program-feature-card row g-4 align-items-center">
+                          <div class="col-md-5">
+                            <img src="vertibi.png" class="program-image img-fluid"
+                              alt="USC Viterbi School of Engineering logo">
+                          </div>
+
+                          <div class="col-md-7 panel-copy text-center text-md-start">
+                            <h2 class="display-2">USC Viterbi School of Engineering</h2>
+                            <div class="gold-rule"></div>
+
+                            <p>USC's school of engineering specifically allows you to <span
+                                class="text-red">combine</span> engineering majors with other USC such as <span
+                                class="text-red">CS/AI, business, arts, cinema, or music.</span></p>
+
+                            <p>As of 2026, USC also has a new B.S in Artificial Intelligence.</p>
+
+                            <p>Engineering courses are available to freshman and so are <span class="text-red">research
+                                opportunities</span> without any prior experience.</p>
+                          </div>
                         </div>
                       </div>
+
 
                       <div class="carousel-item">
-                        <div class="program-feature-card">
-                          <img src="cinema.png" class="program-image" alt="USC Marshall School of Business logo">
-                          <h2>USC Marshall School of Business</h2>
-                          <p>Build leadership, business, and entrepreneurship skills in the heart of Los Angeles.</p>
+                        <div class="program-feature-card row g-4 align-items-center">
+                          <div class="col-md-5">
+                            <img src="cinema.png" class="program-image img-fluid"
+                              alt="USC Marshall School of Business logo">
+                          </div>
+
+                          <div class="col-md-7 panel-copy text-center text-md-start">
+                            <h2 class="display-2">USC Marshall School of Business</h2>
+                            <div class="gold-rule"></div>
+
+                            <p>USC Marshall focuses on <span class="text-red">business, leadership, entrepreneurship,
+                                and global business.</span></p>
+
+                            <p>Students can combine business with other fields at USC, including <span
+                                class="text-red">technology, entertainment, real estate, and entrepreneurship.</span>
+                            </p>
+
+                            <p>Its Los Angeles location also gives students access to internships and career
+                              opportunities with major companies, startups, and entertainment businesses.</p>
+                          </div>
                         </div>
                       </div>
 
-                      <!-- Add more .carousel-item slides here later -->
                     </div>
-
-                    <button class="carousel-control-prev" type="button" data-bs-target="#programCarousel"
-                      data-bs-slide="prev">
-                      <span class="carousel-control-prev-icon"></span>
-                    </button>
-
-                    <button class="carousel-control-next" type="button" data-bs-target="#programCarousel"
-                      data-bs-slide="next">
-                      <span class="carousel-control-next-icon"></span>
-                    </button>
-
-                  </div>
-                </div>
-
-                <!-- Empty vertical automatic carousel area for later -->
-                <div class="col-lg-6">
-                  <div id="verticalProgramCarousel" class="carousel slide vertical-program-carousel"
-                    data-bs-ride="carousel">
-                    <div class="carousel-inner">
-                      <div class="carousel-item active">
-                        <!-- Leave empty for now -->
-                        <div class="vertical-carousel-placeholder"></div>
-                      </div>
-                    </div>
-
-                    <button class="carousel-control-prev" type="button" data-bs-target="#verticalProgramCarousel"
-                      data-bs-slide="prev">
-                      <span class="carousel-control-prev-icon"></span>
-                    </button>
-
-                    <button class="carousel-control-next" type="button" data-bs-target="#verticalProgramCarousel"
-                      data-bs-slide="next">
-                      <span class="carousel-control-next-icon"></span>
-                    </button>
                   </div>
                 </div>
 
@@ -164,20 +182,23 @@
 
           <article class="usc-panel" id="life-panel" data-panel="life-panel" hidden>
             <div class="container panel-container">
-              <div class="row align-items-center g-4 g-lg-5">
+              <div class="row p-3 p-md-5 align-items-center g-4 g-lg-5">
                 <div class="col-lg-3 text-center">
-                  <img src="Fighton.png" class="sc-logo img-fluid" alt="Fight On USC logo">
+                  <img src="Fighton.png" class="sc-logo panel-image img-fluid" alt="Fight On USC logo">
                 </div>
 
-                <div class="col-lg-5 panel-copy text-center text-lg-start">
+                <div class="col-lg-6 panel-copy text-center text-lg-start">
                   <h1 class="display-2">Student Life</h1>
                   <div class="gold-rule"></div>
-                  <p>...</p>
-                  <p>...</p>
+                  <p>The University of Southern California is a big ten school. It is big on school spirit and Greek
+                    life. </p>
+                  <p>USC offers a vibrant campus life with numerous student organizations, events, and activities that
+                    cater to a wide range of interests especially since it is in the city of Los Angeles. This is where
+                    USC got its huge alumni network. </p>
                 </div>
 
-                <div class="col-lg-4">
-                  <img src="studentLife.img.png" class="panel-photo img-fluid" alt="USC students on campus">
+                <div class="col-lg-3">
+                  <img src="studentLife.img.png" class="panel-photo panel-image img-fluid" alt="USC students on campus">
                 </div>
               </div>
             </div>
@@ -185,9 +206,10 @@
 
           <article class="usc-panel" id="aid-panel" hidden data-panel="aid-panel">
             <div class="container panel-container aid-container">
-              <div class="row align-items-center g-4 g-lg-5">
+              <div class="row p-3 p-md-5 align-items-center g-4 g-lg-5">
                 <div class="col-lg-3">
-                  <div class="image-placeholder panel-photo aid-photo d-flex align-items-center justify-content-center"
+                  <div
+                    class="image-placeholder panel-photo panel-image aid-photo d-flex align-items-center justify-content-center"
                     role="img" aria-label="Image placeholder"><i class="bi bi-image"></i></div>
                 </div>
                 <div class="col-lg-6 panel-copy aid-copy text-center text-lg-start">
@@ -199,7 +221,8 @@
                     consequat.</p>
                 </div>
                 <div class="col-lg-3">
-                  <div class="image-placeholder panel-photo aid-photo d-flex align-items-center justify-content-center"
+                  <div
+                    class="image-placeholder panel-photo panel-image aid-photo d-flex align-items-center justify-content-center"
                     role="img" aria-label="Image placeholder"><i class="bi bi-image"></i></div>
                 </div>
               </div>
@@ -208,12 +231,33 @@
         </div>
       </div>
     </section>
+    <section class="usc-strengths scale-element">
+      <div class="container">
+        <h2 class="display-2 text-red">USC Strengths</h2>
+        <div class="row">
+          <div class="col-md-4">
+            <h3 class="display-4">Strong Academics</h3>
+            <p>USC is known for its rigorous academic programs and distinguished faculty. (Arts, Cs/engineering,
+              business)</p>
+          </div>
+          <div class="col-md-4">
+            <h3 class="display-4">Huge Alumni (The trojan network)</h3>
+            <p>USC is known for having a huge alumni network. This makes it stand out from other schools, especially
+              UCLA. </p>
+          </div>
+          <div class="col-md-4">
+            <h3 class="display-4">Los Angeles</h3>
+            <p>Infinite access to entertainment, culture, and career opportunities such as internships and startups.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <section class="admissions" aria-labelledby="admissions-title">
       <div class="admissions-overlay"></div>
       <div class="container admissions-inner">
-        <h2 class="display-1" id="admissions-title">Interested in USC?</h2>
-        <div class="row deadline-row g-0">
+        <h2 class="display-1 fade-element" id="admissions-title">Interested in USC?</h2>
+        <div class="row deadline-row g-0 fade-element">
           <div class="col-md-4 deadline">
             <h3 class="display-4">Early<br>Decision</h3>
             <p>Nov. 1</p>
@@ -226,10 +270,16 @@
             <h3 class="display-4">Regular<br>Decision</h3>
             <p>Jan. 15</p>
           </div>
+
         </div>
       </div>
     </section>
   </main>
+
+  <footer class="bg-dark text-white text-center py-3">
+    <p class="mb-0">&copy; 2026 USC. All rights reserved.</p>
+  </footer>
+
   <script src="script.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="programs.js"></script>

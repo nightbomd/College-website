@@ -106,17 +106,25 @@ body {
 .usc-tab.active { background: var(--gold); color: #211900; }
 
 .panels, .usc-panel { min-height: 650px; }
+.panels { overflow-x: clip; }
 
 .usc-panel { padding: 112px 0 54px; background: #fff; }
-.usc-panel.active { animation: fadeIn .28s ease; }
+.usc-panel.active { animation: panelSlideRight .4s ease-out; }
 
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+@keyframes panelSlideRight {
+  from {
+    opacity: 0;
+    transform: translateX(-3rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 .panel-container { max-width: 1320px; }
-.panel-copy h1 { margin: 0; color: var(--cardinal); font-weight: 400; line-height: 1; }
+.panel-copy h1,
+.panel-copy h2 { margin: 0; color: var(--cardinal); font-weight: 400; line-height: 1; }
 .gold-rule { width: 100%; max-width: 400px; height: 4px; margin: 1rem 0 1.4rem; background: var(--gold); }
 .panel-copy p { max-width: 520px; margin-bottom: .85rem; font-size: 1rem; line-height: 1.58; }
 
@@ -146,7 +154,22 @@ body {
   width: 100%;
   height: 400px;
   object-fit: cover;
+  border-radius: .75rem .75rem 0 0;
 }
+
+.panel-image {
+  display: block;
+  width: 100%;
+  height: 400px;
+}
+
+.sc-logo.panel-image {
+  max-width: none;
+  max-height: none;
+  object-fit: contain;
+}
+
+.panel-photo.panel-image { object-fit: cover; }
 
 .about-photo { object-position: center; }
 
@@ -202,7 +225,7 @@ body {
 .program-arrow:hover, .program-arrow:focus-visible { color: var(--cardinal); }
 
 .aid-copy { text-align: left; }
-.aid-photo { height: 300px; }
+.aid-photo { height: 400px; }
 
 .admissions {
   position: relative;
@@ -233,8 +256,8 @@ body {
   display: block;
 }
 .program-feature-card {
-  max-width: 260px;
-  margin: auto;
+  max-width: none;
+  margin: 0;
 }
 
 .program-image-placeholder {
@@ -243,16 +266,7 @@ body {
   border-radius: 0.25rem;
 }
 
-.program-feature-card h2 {
-  color: #990000;
-  font-size: 1.2rem;
-  margin: 0.5rem 0 0.2rem;
-}
-
-.program-feature-card p {
-  font-size: 0.7rem;
-  margin: 0;
-}
+.program-feature-card p { margin-bottom: .85rem; font-size: 1rem; line-height: 1.58; }
 
 .vertical-program-carousel {
   min-height: 250px;
@@ -275,20 +289,48 @@ body {
   line-height: 1;
 }
 #programCarousel {
-  width: 260px;
-  height: 50vh;
-  margin: auto;
+  width: 100%;
+  height: auto;
+  margin: 0;
 }
 
 #programCarousel .carousel-inner,
-#programCarousel .carousel-item,
-#programCarousel .program-feature-card {
+#programCarousel .carousel-item {
   width: 100%;
-  height: 100%;
 }
 
 #programCarousel .program-feature-card {
   overflow: hidden;
+}
+
+#programCarousel .panel-copy h2 {
+  font-size: 2rem;
+  line-height: 1.15;
+}
+
+#programCarousel .carousel-control-prev,
+#programCarousel .carousel-control-next {
+  top: 50%;
+  width: 3rem;
+  height: 3rem;
+  padding: .75rem;
+  background-color: var(--cardinal);
+  border: 2px solid #fff;
+  border-radius: 50%;
+  opacity: 1;
+  transform: translateY(-50%);
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .3);
+}
+
+#programCarousel .carousel-control-prev { left: 0; }
+#programCarousel .carousel-control-next { right: 0; }
+
+#programCarousel .carousel-control-prev:hover,
+#programCarousel .carousel-control-next:hover,
+#programCarousel .carousel-control-prev:focus,
+#programCarousel .carousel-control-next:focus {
+  background-color: var(--cardinal-dark);
+  opacity: 1;
 }
 
 #programCarousel .program-image-placeholder {
@@ -297,18 +339,10 @@ body {
 }
 #programCarousel .program-image {
   width: 100%;
-  height: 300px;
+  height: 400px;
   object-fit: cover;
-  border-top-left-radius: 1rem;
-  border-top-right-radius: 1rem;
+  border-radius: .75rem .75rem 0 0;
 }
-.hero-usc {
-  font-size: 6.5rem;
-}
-.hero-trojans {
-  font-size: 6.5rem;
-}
-
 .hero-wordmark img.trojan {
   width: min(250px, 42vw);
   max-width: none;
@@ -317,4 +351,13 @@ body {
   margin-left: 0;
   object-fit: contain;
   
+}
+.usc-strengths {
+  background-color: var(--gold);
+  color: black;
+  padding: 2rem 0;
+}
+.text-red {
+  color: var(--cardinal-dark);
+  font-weight: 800;
 }
