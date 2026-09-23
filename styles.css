@@ -365,3 +365,17 @@ body {
   max-width: 100%;
   height: auto;
 }
+
+/* Match Bootstrap's lg breakpoint so rules fill stacked panel columns. */
+@media (max-width: 991.98px) {
+  .gold-rule {
+    max-width: none;
+  }
+}
+
+/* The tab buttons wrap into two rows below Bootstrap's md breakpoint. */
+@media (max-width: 767.98px) {
+  .usc-panel {
+    padding-top: 190px;
+  }
+}
