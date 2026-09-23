@@ -1,0 +1,1 @@
+This is a prospective student project meant for incoming freshman to learn about the Universtiy of Southern California. It is meant as a quick warmup project to review fundamentals I should have been practicing over the summer hopeufly
