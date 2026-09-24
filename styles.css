@@ -355,7 +355,7 @@ body {
 .usc-strengths {
   background-color: var(--gold);
   color: black;
-  padding: 2rem 0;
+  height: 75vh !important;
 }
 .text-red {
   color: var(--cardinal-dark);
@@ -405,6 +405,19 @@ body {
   background-color: #FFCC00;
   color: #990000;
   font-weight: bold;
-  padding: 6px 18px;
   margin-bottom: 0;
+}
+.usc-strengths { 
+  background-color: var(--cardinal);
+  color: white;
+  min-height: 100vh;
+  padding: 5rem !important;
+}
+
+.usc-strengths .container {
+  height: auto !important;
+}
+.text-gold {
+  color: var(--gold);
+  font-weight: bold;
 }
